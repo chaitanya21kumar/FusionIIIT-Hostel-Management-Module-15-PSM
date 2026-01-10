@@ -1,0 +1,9 @@
+Step 2 – Change Log
+Workflow: HM-WF-104 – Student Room Change
+
+- Validated end-to-end main flow using a single sequence diagram.
+- Confirmed responsibility separation across Boundary, Control, and Entity layers.
+- Finalized RoomChangeRequest lifecycle from submission to approval.
+- Ensured dual approval (Caretaker + Warden) is explicitly represented.
+- Verified room reallocation and occupancy update occur only after approval.
+- No new entities introduced; Step 1 domain remains intact.

@@ -1,0 +1,37 @@
+HM-UC-006: Submit Complaint
+M1–M5 (Input): Boundary (ComplaintSubmissionUI) captures student input (Category, Description) and optional files.
+
+M6 (Validation): Control (ComplaintValidationController) enforces BR-HM-106 (mandatory fields and valid categories).
+
+M7–M8 (Persistence): Control (ComplaintPersistenceController) creates the Entity (Complaint) and assigns a Unique ID, setting status to "Submitted".
+
+M9 (Notification): Control (NotificationService) sends an asynchronous alert to the Caretaker.
+
+A2 (Exception): Control (ComplaintValidationController) returns error messages to Boundary if data is invalid.
+
+HM-UC-007: Review and Address Complaint
+M1–M2 (Fetch): Control (ComplaintQueryController) retrieves "Submitted" or "In Progress" Entities (Complaint) for the Boundary (ComplaintReviewUI).
+
+M3–M4 (Action): Boundary captures the Caretaker's investigation notes.
+
+M5–M7 (Status Update): Control (ComplaintResolutionController) updates the Entity (Complaint) status to "In Progress" and stores InvestigationRemarks.
+
+M8 (Notification): Control (NotificationService) alerts the Student that their complaint is being addressed.
+
+HM-UC-008: Escalate Complaint to Warden
+M1–M3 (Input): Boundary (ComplaintEscalationUI) captures the mandatory EscalationReason.
+
+M5 (Validation): Control (ComplaintEscalationController) ensures escalation logic complies with BR-HM-109.
+
+M6–M7 (State Change): Control (ComplaintEscalationController) updates Entity (Complaint) status to "Escalated" and creates an Entity (EscalationLog) with a timestamp.
+
+M8–M9 (Multi-Notification): Control (NotificationService) triggers dual alerts to the Warden (primary) and the Student (informational).
+
+HM-UC-009: View and Manage Complaint Reports
+M1–M4 (Monitoring): Control (ComplaintQueryController) fetches Entities (Complaint, EscalationLog) filtered by the Warden’s jurisdiction for Boundary (ComplaintManagementDashboardUI).
+
+M5–M8 (Action): Control (ComplaintResolutionController) handles the Warden's override to resolve or reassign the Entity.
+
+A2 (Reporting): Control (ReportGenerationController) aggregates Entity data (Resolution time, Category stats) to produce a Boundary view of analytics.
+
+S1 (Sub-flow): Control (ReportGenerationController) formats the data for binary download

@@ -1,0 +1,37 @@
+## Step 4 – Change Log 
+### Workflow: HM-WF-104 — Student Room Change
+
+---
+
+## 1. Change Log (Post Workflow Realization)
+
+### Context
+After completing workflow realization and completeness verification
+for HM-WF-104, the EBC domain model was reviewed against the complete
+workflow, use cases, sequence diagram, and state diagram.
+
+---
+
+### Changes Introduced
+
+1. **Lifecycle Finalization**
+   - Confirmed RoomChangeRequest lifecycle from submission to completion
+     or rejection.
+
+2. **Approval Logic Stabilization**
+   - Dual-approval requirement (Caretaker + Warden) finalized and
+     enforced via Approval Controller and state transitions.
+
+3. **Room Reallocation Sequencing**
+   - Room reallocation and occupancy updates occur only after Approved
+     state.
+
+4. **System Responsibility Clarity**
+   - Validation, notification, and audit responsibilities explicitly
+     assigned to control components.
+
+5. **Model Stability**
+   - No new entities introduced in Step 4.
+   - Domain declared final and stable.
+
+---

@@ -1,0 +1,15 @@
+M1: Navigate to Leave History Section (Boundary: LeaveHistoryUI)
+
+M2: System retrieves records based on Actor Role (Control: LeaveHistoryController)
+
+M3: Fetch student's own requests OR caretaker's hostel requests (Control) → Query LeaveRequest Entity
+
+M4: Display summary list (Status, Dates)
+
+(Boundary: LeaveHistoryUI)
+
+M5: Select request to view details [A2] (Boundary: User Action)
+
+M6: System retrieves full details and attachments (Control: LeaveHistoryController) → Retrieves from LeaveRequest & SupportingDocument
+
+M7: Display complete request details (Boundary: LeaveHistoryUI)

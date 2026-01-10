@@ -1,0 +1,44 @@
+HM-UC-012: Notify and Record Room Assignments
+This use case focuses on the automated communication and audit trail generated after bulk allotment.
+
+M1–M2 (Detection & Fetch): Control (RoomAssignmentNotificationController) detects the completion event from the Entity (System Timer/Event) and retrieves details from the Entity (AllotmentRecord).
+
+M3–M4 (Student Notification): Control (RoomAssignmentNotificationController) formats messages and triggers the Boundary (FusionNotificationGateway) to push alerts to Students.
+
+M5–M6 (Staff Notification): Control (RoomAssignmentNotificationController) generates an occupancy summary for the Boundary (CaretakerDashboardUI).
+
+M7–M8 (Profile Update): Control (RoomAssignmentNotificationController) updates the Entity (StudentProfile) with the new room allocation and persists the history in the Entity (AllotmentRecord).
+
+M9 (Audit): Control (AuditLogController) records the entire transaction in the Entity (SystemAuditLog) for compliance.
+
+A1 (Exception): Boundary (FusionNotificationGateway) reports delivery failures back to the Control, which schedules a retry and logs the error in the Entity (SystemAuditLog).
+
+HM-UC-013: Perform Bulk Room Allotment
+This use case handles the administrative logic for mass student placement and capacity management.
+
+N3 (Initiation): Boundary (BulkAllotmentUI) captures the Super Admin’s selection of pending requests.
+
+D1 (Capacity Check): Control (CapacityCheckController) queries the Entity (Room) and Entity (Hostel) to verify that total available spots meet or exceed the request count.
+
+D2 (Validation): Control (AllotmentEngineController) enforces BR-HM-112 by validating current occupancy against hard capacity limits to prevent over-allocation.
+
+N4 (Assignment): Control (AllotmentEngineController) updates the Entity (Room) occupancy counts and links students to specific room Entities.
+
+N5 (Finalization): Control (AllotmentEngineController) transitions the Entity (AccommodationRequest) status to "Allotted".
+
+E5/E7 (Exception): Control (CapacityCheckController) returns an error to the Boundary (BulkAllotmentUI) if capacity is insufficient, terminating the process before data is committed.
+
+HM-UC-014: Review and Process Room Change Request
+This use case models the collaborative review process between the Caretaker and Warden for individual student moves.
+
+M1–M4 (Review): Boundary (RoomChangeRequestDashboard) displays the request details fetched by the Control (RoomChangeProcessingController) from the Entity (RoomChangeRequest).
+
+M5 (Availability): Control (RoomChangeProcessingController) queries the Entity (Room) to verify if the requested target room is currently available.
+
+M7 (Compliance): Control (RoomChangeProcessingController) checks the request against the Entity (HostelPolicy) to ensure the move adheres to institutional rules.
+
+M9–M10 (Decision): Boundary (RoomChangeRequestDashboard) captures mandatory decision remarks and the approval/rejection status from the Warden or Caretaker.
+
+M11–M12 (State Change): Control (RoomChangeProcessingController) validates the decision and updates the Entity (RoomChangeRequest) status to "Approved" or "Rejected".
+
+A2 (Policy Violation): Control (RoomChangeProcessingController) identifies a violation in Entity (HostelPolicy) and forces a "Rejected" status, requiring the Warden to cite the policy in the Boundary.

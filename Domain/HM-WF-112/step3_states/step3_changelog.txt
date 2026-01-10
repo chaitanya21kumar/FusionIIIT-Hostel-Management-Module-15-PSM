@@ -1,0 +1,11 @@
+Added Status Enum to GuestRoomBooking: {Pending, Approved, Rejected, CheckedIn, Cancelled, Completed, CompletedWithDamages}.
+Added Attributes to GuestRoomBooking implied by transitions:
+	checkInTimestamp (set during Approved -> CheckedIn).
+	checkOutTimestamp (set during CheckedIn -> Completed).
+	damageDescription (set during CheckedIn -> CompletedWithDamages).
+Added Operations to GuestRoomBooking (or its Manager):
+	approve()
+	reject(reason)
+	checkIn(idDetails)
+	checkOut(inspectionResult)
+	cancel()

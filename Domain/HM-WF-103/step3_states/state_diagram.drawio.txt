@@ -1,0 +1,29 @@
+<mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="SA" value="Super Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="30" y="40" width="30" height="60" as="geometry" /></mxCell>
+    <mxCell id="W" value="Warden" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="30" y="450" width="30" height="60" as="geometry" /></mxCell>
+
+    <mxCell id="L1" value="AllotmentUI / Dashboard" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1"><mxGeometry x="120" y="40" width="160" height="680" as="geometry" /></mxCell>
+    <mxCell id="L2" value="Capacity/PolicyCtrl" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1"><mxGeometry x="320" y="40" width="130" height="680" as="geometry" /></mxCell>
+    <mxCell id="L3" value="AllotmentEngineCtrl" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1"><mxGeometry x="490" y="40" width="140" height="680" as="geometry" /></mxCell>
+    <mxCell id="L4" value="Room / Request Entity" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1"><mxGeometry x="670" y="40" width="140" height="680" as="geometry" /></mxCell>
+    <mxCell id="L5" value="Audit / Notif Service" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1"><mxGeometry x="850" y="40" width="130" height="680" as="geometry" /></mxCell>
+
+    <mxCell id="T1" value="initiateBulkAllotment(list)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="SA" target="L1"><mxGeometry width="80" relative="1" as="geometry"><mxPoint x="60" y="120" as="sourcePoint" /></mxGeometry></mxCell>
+    <mxCell id="T2" value="checkCapacity(BR-HM-113)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L1" target="L2"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T3" value="processAllotment()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L3"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T4" value="updateStatus(Allotted)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L3" target="L4"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+
+    <mxCell id="T5" value="recordAssignmentHistory()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L3" target="L5"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T6" value="pushOnboardingNotif()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L5" target="L5"><mxGeometry width="80" relative="1" as="geometry"><mxPoint x="915" y="260" as="sourcePoint" /><mxPoint x="920" y="290" as="targetPoint" /><Array points="950 x 260; 950 x 290" /></mxGeometry></mxCell>
+
+    <mxCell id="T7" value="reviewChangeRequest(id)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="W" target="L1"><mxGeometry width="80" relative="1" as="geometry"><mxPoint x="60" y="480" as="sourcePoint" /></mxGeometry></mxCell>
+    <mxCell id="T8" value="validateCompliance(Policy)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L1" target="L2"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T9" value="submitDecision(remarks)" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L1" target="L3"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T10" value="finalizeRequest()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L3" target="L4"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+    <mxCell id="T11" value="logDecisionAudit()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L3" target="L5"><mxGeometry width="80" relative="1" as="geometry" /></mxCell>
+  </root>
+</mxGraphModel>

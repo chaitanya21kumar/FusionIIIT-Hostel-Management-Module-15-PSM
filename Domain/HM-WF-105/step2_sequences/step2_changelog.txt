@@ -1,0 +1,7 @@
+Fine Class: Added create() method. Added markPaid() (implied by lifecycle, though not in strict main flow of UC-016, needed for completeness of BR-HM-014).
+
+Student Class: Added addFine().
+
+FineController: Refined methods to match sequence message imposeFine().
+
+Traceability: Tagged operations with source Sequence.

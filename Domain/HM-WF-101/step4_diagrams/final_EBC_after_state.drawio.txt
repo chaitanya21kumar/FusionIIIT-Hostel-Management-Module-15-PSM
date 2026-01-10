@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Complaint State Machine">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="ellipse;fillColor=#000000;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="SUBMITTED" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="95" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="UNDER INVESTIGATION&#xa;(Caretaker)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="ESCALATED&#xa;(Warden)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="150" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="RESOLVED" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="95" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Submit [BR-HM-106]" style="edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="[Cat != Security]&#xa;BR-HM-107.b" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.25;entryX=0;entryY=0.5;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="[Cat == Security]&#xa;BR-HM-107.a" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.75;entryX=0;entryY=0.5;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Escalate&#xa;BR-HM-109" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Resolve&#xa;BR-HM-108" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Resolve&#xa;BR-HM-110" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

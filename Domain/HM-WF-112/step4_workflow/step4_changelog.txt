@@ -1,0 +1,21 @@
+Trigger: Full Workflow Realization (HM-WF-112)
+
+Architecture Refinement (Controllers):
+
+Split the generic control logic into two distinct classes to better represent the workflow lanes:
+
+BookingController: Handles Student-facing operations (Submit Request, Validate Dates) corresponding to HM-UC-036.
+
+BookingManager: Handles Caretaker-facing operations (Approve, Check-In, Check-Out) corresponding to HM-UC-037.
+
+Entity Refinement:
+
+Student: Added conductHistory attribute. This was identified during the realization of the "Review Student History" step in the workflow (Decision Node D1 logic), which was not explicitly captured in earlier steps.
+
+GuestRoom: Added explicit reserve() and release() operations to map to the system tasks "Reserve Room" and "Release Room" defined in the workflow.
+
+Relationship Finalization:
+
+Confirmed GuestIdentity as a 0..1 association to GuestRoomBooking. It is optional at the time of creation and only becomes mandatory at the Check-In workflow step.
+
+Confirmed Fine as a 0..1 association, as it is only created if the "Damages Found?" decision node evaluates to true.

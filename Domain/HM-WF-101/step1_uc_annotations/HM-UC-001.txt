@@ -1,0 +1,18 @@
+UC: HM-UC-001 – Submit Leave Request
+M1: Open Leave Request Form (Boundary: LeaveRequestFormUI)
+
+M2: Enter leave details – startDate, endDate, reason
+
+(Boundary: User Action) → LeaveRequest (startDate, endDate, reason, status="Pending") (Entity: Attributes)
+
+M3: Upload supporting documents (Boundary: User Action) → SupportingDocument (docID, fileName, fileData) (Entity)
+
+M4: System validates leave period and mandatory fields (Control: LeaveValidationController)
+
+M5: Submit request (Boundary: User Action)
+
+M6: System persists leave request (Control: LeaveRequestProcessor) → LeaveRequest Entity (Saved to DB)
+
+M7: System triggers caretaker notification (Control: NotificationService)
+
+M8: Display submission confirmation (Boundary: ConfirmationView)

@@ -1,0 +1,5 @@
+Added Enum: StayStatus to represent the complex lifecycle (including Revoked and Terminated).
+
+New Operations: revoke() and terminate() added to ExtendedStayApplication to handle payment failures (BR-HM-073) and conduct violations (BR-HM-076).
+
+Attribute Update: paymentDeadline added to StayCharge.

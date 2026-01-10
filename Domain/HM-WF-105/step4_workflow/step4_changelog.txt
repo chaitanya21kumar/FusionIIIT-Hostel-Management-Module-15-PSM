@@ -1,0 +1,7 @@
+Consolidated all attributes and operations.
+
+Added visibility modifiers.
+
+Added notes linking specific methods to BRs (013, 022, 014).
+
+Ensured DisciplinaryReport is connected to the controller.

@@ -1,0 +1,5 @@
+Added Controller: ExtendedStayController to handle validation logic and object creation.
+
+Added Service: PricingService to handle BR-HM-064 (Charge calculation including facilities and taxes).
+
+Refined Entity: VacationPeriod updated with isValidDateRange() method for BR-HM-062

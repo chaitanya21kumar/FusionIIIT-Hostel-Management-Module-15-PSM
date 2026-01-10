@@ -1,0 +1,111 @@
+<mxGraphModel dx="1024" dy="768" grid="1" gridSize="10" guides="1"
+  tooltips="1" connect="1" arrows="1" fold="1"
+  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+  math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Boundary -->
+    <mxCell id="b1"
+      value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;
+      &lt;i&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;
+      &lt;b&gt;RoomChangeRequestDashboard&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;
+      +displayRequestDetails()&lt;br&gt;
+      +inputDecision()&lt;br&gt;
+      +showConfirmation()"
+      style="verticalAlign=top;align=left;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="160" width="220" height="100" as="geometry"/>
+    </mxCell>
+
+    <!-- Control -->
+    <mxCell id="c1"
+      value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;
+      &lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;
+      &lt;b&gt;RoomChangeProcessingController&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;
+      +checkAvailability()&lt;br&gt;
+      +validateCompliance()&lt;br&gt;
+      +updateRequestStatus()&lt;br&gt;
+      +recordRemarks()"
+      style="verticalAlign=top;align=left;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="160" width="240" height="120" as="geometry"/>
+    </mxCell>
+
+    <!-- Entity: RoomChangeRequest -->
+    <mxCell id="e1"
+      value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;
+      &lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;
+      &lt;b&gt;RoomChangeRequest&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;
+      +requestID : String&lt;br&gt;
+      +status : Enum&lt;br&gt;
+      +reason : Text&lt;br&gt;
+      +remarks : Text"
+      style="verticalAlign=top;align=left;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="40" width="200" height="120" as="geometry"/>
+    </mxCell>
+
+    <!-- Entity: Room -->
+    <mxCell id="e2"
+      value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;
+      &lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;
+      &lt;b&gt;Room&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;
+      +roomNumber : String&lt;br&gt;
+      +isAvailable : Boolean&lt;br&gt;
+      +getCapacity() : Int"
+      style="verticalAlign=top;align=left;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="190" width="200" height="100" as="geometry"/>
+    </mxCell>
+
+    <!-- Entity: HostelPolicy -->
+    <mxCell id="e3"
+      value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;
+      &lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;
+      &lt;b&gt;HostelPolicy&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;
+      +policyID : String&lt;br&gt;
+      +description : Text&lt;br&gt;
+      +checkCompliance() : Bool"
+      style="verticalAlign=top;align=left;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="320" width="200" height="110" as="geometry"/>
+    </mxCell>
+
+    <!-- Relationships -->
+
+    <!-- Boundary -> Control -->
+    <mxCell id="L1"
+      style="endArrow=classic;html=1;"
+      edge="1" parent="1"
+      source="b1" target="c1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Control -> RoomChangeRequest -->
+    <mxCell id="L2"
+      style="endArrow=classic;html=1;"
+      edge="1" parent="1"
+      source="c1" target="e1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Control -> Room -->
+    <mxCell id="L3"
+      style="endArrow=classic;html=1;"
+      edge="1" parent="1"
+      source="c1" target="e2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Control -> HostelPolicy -->
+    <mxCell id="L4"
+      style="endArrow=classic;html=1;"
+      edge="1" parent="1"
+      source="c1" target="e3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

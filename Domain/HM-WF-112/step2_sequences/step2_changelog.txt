@@ -1,0 +1,9 @@
+Added BookingController (Control stereotype) derived from the sequence logic.
+
+Added method validateDates() to Controller (handles BR-HM-052, 054, 055).
+
+Added method validateGuestInfo() to Controller (handles BR-HM-053).
+
+Updated Student entity with checkEligibility() to enforce BR-HM-051.
+
+Added association between BookingController and GuestRoom for availability checking.
