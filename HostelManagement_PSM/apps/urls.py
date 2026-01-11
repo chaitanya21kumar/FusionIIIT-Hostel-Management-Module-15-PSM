@@ -20,7 +20,6 @@ URLS = {
     "POST /report/generate": "generate_report_view",
     
     # ======================================================
-    # PHASE 2: ADDITIONAL URL MAPPINGS
     # ======================================================
     
     # WF-103 — Room Allotment

@@ -14,7 +14,6 @@ Architecture:
 - URL Mappings: urls.py
 """
 
-# PHASE 3: Export commonly used entities for easier imports
 from .models import (
     # Core Users
     Student, Caretaker, Warden, SuperAdmin,
