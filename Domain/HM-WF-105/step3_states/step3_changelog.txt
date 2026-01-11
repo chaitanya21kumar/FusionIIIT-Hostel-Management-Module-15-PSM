@@ -1,0 +1,5 @@
+FineStatus Enum: Added to formally define states from BR-HM-014.
+
+Fine Class: Added attributes imposedAt, paidAt. Added operations verifyPayment(), escalate().
+
+FineController: Added monitorThresholds() to handle the logic for BR-HM-014.c (Escalation).

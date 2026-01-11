@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="ANAq_OamN6jBemd8j7OT">
+    <mxGraphModel dx="4244" dy="1660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PjgOqDU0WYvziyEwImKa-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;" value="Warden/Caretaker" vertex="1">
+          <mxGeometry height="888" width="35" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="ReportGenerationUI" vertex="1">
+          <mxGeometry height="888" width="161" x="303" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="ReportValidationController" vertex="1">
+          <mxGeometry height="888" width="208" x="545" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="ReportGenerationController" vertex="1">
+          <mxGeometry height="888" width="216" x="803" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="ReportParameters" vertex="1">
+          <mxGeometry height="888" width="150" x="1069" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="ReportData" vertex="1">
+          <mxGeometry height="888" width="150" x="1269" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="Report" vertex="1">
+          <mxGeometry height="888" width="150" x="1469" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-8" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-2" value="Open Generate Report">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-9" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-1" value="Display report form">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-10" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-2" value="Select report type, dates, filters">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-11" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-3" value="validateParameters(params)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="525" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-12" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-5" value="validate()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="905" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-13" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-3" value="valid">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="908" y="387" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-14" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-2" value="validation OK">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="528" y="439" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-15" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-4" value="generateReport(params)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="656" y="491" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-16" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-6" value="aggregateData()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1136" y="543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-17" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-6" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-4" value="aggregated data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1139" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-18" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-7" value="generate()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1236" y="647" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-19" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-7" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-4" value="report created">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1239" y="699" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-20" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-2" value="report generated">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="659" y="751" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PjgOqDU0WYvziyEwImKa-21" edge="1" parent="1" source="PjgOqDU0WYvziyEwImKa-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PjgOqDU0WYvziyEwImKa-1" value="Display report preview">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="251" y="803" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

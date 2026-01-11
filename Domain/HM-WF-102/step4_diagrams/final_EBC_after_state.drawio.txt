@@ -1,0 +1,33 @@
+<mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="B_L" value="Boundary Layer (UI)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="20" y="40" width="200" height="400" as="geometry" />
+    </mxCell>
+    <mxCell id="b_comp" value="ComplaintPortalUI" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_L"><mxGeometry x="10" y="40" width="180" height="50" as="geometry" /></mxCell>
+    <mxCell id="b_mgmt" value="WardenManagementUI" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_L"><mxGeometry x="10" y="110" width="180" height="50" as="geometry" /></mxCell>
+    
+    <mxCell id="C_L" value="Control Layer (Logic)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="280" y="40" width="260" height="400" as="geometry" />
+    </mxCell>
+    <mxCell id="c_valid" value="ComplaintValidationCtrl" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_L"><mxGeometry x="20" y="40" width="220" height="50" as="geometry" /></mxCell>
+    <mxCell id="c_route" value="ComplaintRoutingCtrl" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_L"><mxGeometry x="20" y="100" width="220" height="50" as="geometry" /></mxCell>
+    <mxCell id="c_escal" value="ComplaintEscalationCtrl" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_L"><mxGeometry x="20" y="160" width="220" height="50" as="geometry" /></mxCell>
+    <mxCell id="c_audit" value="SystemAuditLogController" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="C_L"><mxGeometry x="20" y="220" width="220" height="50" as="geometry" /></mxCell>
+    <mxCell id="c_notif" value="NotificationService" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_L"><mxGeometry x="20" y="280" width="220" height="50" as="geometry" /></mxCell>
+
+    <mxCell id="E_L" value="Entity Layer (Data)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="600" y="40" width="220" height="400" as="geometry" />
+    </mxCell>
+    <mxCell id="e_main" value="&lt;b&gt;Complaint&lt;/b&gt;&lt;br&gt;- id: String&lt;br&gt;- status: Enum&lt;br&gt;- category: String" style="html=1;whiteSpace=wrap;align=left;spacingLeft=4;" vertex="1" parent="E_L"><mxGeometry x="20" y="40" width="180" height="80" as="geometry" /></mxCell>
+    <mxCell id="e_log" value="&lt;b&gt;EscalationLog&lt;/b&gt;&lt;br&gt;- timestamp: Date&lt;br&gt;- reason: String" style="html=1;whiteSpace=wrap;align=left;spacingLeft=4;" vertex="1" parent="E_L"><mxGeometry x="20" y="150" width="180" height="60" as="geometry" /></mxCell>
+    <mxCell id="e_audit" value="&lt;b&gt;AuditTrail&lt;/b&gt;&lt;br&gt;- action: String&lt;br&gt;- actorID: String" style="html=1;whiteSpace=wrap;align=left;spacingLeft=4;" vertex="1" parent="E_L"><mxGeometry x="20" y="240" width="180" height="60" as="geometry" /></mxCell>
+
+    <mxCell id="link1" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="b_comp" target="c_valid"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="link2" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" parent="1" source="c_route" target="e_main"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="link3" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_escal" target="e_log"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="link4" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_audit" target="e_audit"><mxGeometry relative="1" as="geometry" /></mxCell>
+  </root>
+</mxGraphModel>

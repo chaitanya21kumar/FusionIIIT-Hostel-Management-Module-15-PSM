@@ -1,0 +1,9 @@
+Step 3 – Change Log
+Workflow: HM-WF-104 – Student Room Change
+
+- Introduced state machine for RoomChangeRequest entity.
+- Explicitly modeled approval, rejection, and completion states.
+- Aligned dual-approval logic with state transitions.
+- Ensured room reallocation occurs only after Approved state.
+- Updated EBC domain to reflect state-aware lifecycle.
+- No new entities added; structure stabilized.

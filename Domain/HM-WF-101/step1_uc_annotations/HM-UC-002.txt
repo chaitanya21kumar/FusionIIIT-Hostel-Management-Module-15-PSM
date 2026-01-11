@@ -1,0 +1,17 @@
+M1: Open Pending Requests Dashboard (Boundary: LeaveDashboardUI)
+
+M2: View specific request details and documents (Boundary: User Action) → Retrieves from LeaveRequest & SupportingDocument (Entities)
+
+M3: Enter decision (Approve/Reject) and remarks (Boundary: User Action) → LeaveRequest.status, LeaveRequest.remarks (Entity Attributes)
+
+M4: System validates rejection reason [A2] (Control: LeaveDecisionController)
+
+M5: Submit decision (Boundary: User Action)
+
+M6: System updates leave status (Control: LeaveDecisionController) → LeaveRequest.status (Updated)
+
+M7: System updates student attendance (if approved) (Control: LeaveDecisionController) → AttendanceRecord.onLeave = True (Entity Attribute)
+
+M8: System sends notification to Student (Control: NotificationService)
+
+M9: Display process confirmation (Boundary: ConfirmationView)

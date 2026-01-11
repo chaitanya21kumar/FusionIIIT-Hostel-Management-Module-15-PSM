@@ -1,0 +1,73 @@
+<mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="B_Group" value="Boundary Layer" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="220" height="420" as="geometry" />
+    </mxCell>
+    <mxCell id="B1" value="&lt;i&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ComplaintSubmissionUI&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_Group">
+      <mxGeometry x="20" y="40" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="B2" value="&lt;i&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ComplaintReviewUI&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_Group">
+      <mxGeometry x="20" y="110" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="B3" value="&lt;i&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;EscalationUI&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_Group">
+      <mxGeometry x="20" y="180" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="B4" value="&lt;i&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ManagementDashboardUI&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="B_Group">
+      <mxGeometry x="20" y="250" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="C_Group" value="Control Layer" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="40" width="240" height="420" as="geometry" />
+    </mxCell>
+    <mxCell id="C1" value="&lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ComplaintValidationCtrl&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_Group">
+      <mxGeometry x="30" y="40" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="C2" value="&lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ComplaintRoutingCtrl&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_Group">
+      <mxGeometry x="30" y="110" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="C3" value="&lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;EscalationCtrl&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_Group">
+      <mxGeometry x="30" y="180" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="C4" value="&lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ReportGenerationCtrl&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_Group">
+      <mxGeometry x="30" y="250" width="180" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="C5" value="&lt;i&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;NotificationService&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="C_Group">
+      <mxGeometry x="30" y="320" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="E_Group" value="Entity Layer" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="620" y="40" width="220" height="420" as="geometry" />
+    </mxCell>
+    <mxCell id="E1" value="&lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Complaint&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="E_Group">
+      <mxGeometry x="20" y="40" width="180" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="E2" value="&lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;EscalationLog&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="E_Group">
+      <mxGeometry x="20" y="130" width="180" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="E3" value="&lt;i&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Attachment&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="E_Group">
+      <mxGeometry x="20" y="220" width="180" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="rel1" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="B1" target="C1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel2" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="C1" target="C2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel3" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="C2" target="E1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel4" value="1..*" style="endArrow=none;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="E1" target="E2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel5" value="0..*" style="endArrow=none;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="E2" target="E3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel6" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" parent="1" source="C5" target="E1">
+      <mxGeometry relative="1" as="geometry"><Array points="590 385 590 125" /></mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>

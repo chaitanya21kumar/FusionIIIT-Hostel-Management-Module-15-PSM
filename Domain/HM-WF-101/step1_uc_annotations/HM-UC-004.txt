@@ -1,0 +1,13 @@
+M1: System detects status change event (Entity: System/Timer) → Triggered by LeaveRequest.status change
+
+M2: Determine notification recipients [A1] (Control: AttendanceNotificationController)
+
+M3: Generate and push message (Control) → FusionNotificationGateway (Boundary)
+
+M4: Check if status is "Approved" [A2] (Control: AttendanceNotificationController)
+
+M5: Calculate duration and mark attendance (Control) → AttendanceRecord.attendanceStatus = "On Leave" (Entity Attribute)
+
+M6: Link leave record with security planning (Control) → AttendanceRecord Entity (Updated)
+
+M7: System logs update event (Control) → SystemAuditLog (logID, details) (Entity)

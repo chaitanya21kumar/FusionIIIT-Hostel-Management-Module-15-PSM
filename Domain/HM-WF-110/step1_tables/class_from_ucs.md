@@ -1,0 +1,21 @@
+## Step 1 – PIM Class Table (Notice Management)
+
+| Class / Component            | Stereotype | Attributes                                                                 | Methods                                                                 | UC IDs                |
+|-----------------------------|------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------|----------------------|
+| Student                     | Entity     | studentID, name, hostelID                                                   | viewNotice(), markAsRead(), downloadAttachment()                         | HM-UC-033            |
+| Caretaker                   | Entity     | staffID, name, assignedHostels                                              | createNotice(), editNotice(), deleteNotice()                             | HM-UC-032            |
+| Warden                      | Entity     | staffID, name, supervisedHostels                                            | createNotice(), editNotice(), deleteNotice()                             | HM-UC-032            |
+| Notice                      | Entity     | noticeID, title, description, priority, startDate, endDate, status         | create(), publish(), update(), delete(), archive()                       | HM-UC-032, HM-UC-033 |
+| NoticeTarget                | Entity     | targetID, noticeID, hostelID, scopeType                                     | assignTarget(), updateTarget()                                           | HM-UC-032            |
+| Attachment                  | Entity     | attachmentID, noticeID, fileName, fileType, fileSize                        | upload(), validate(), download()                                        | HM-UC-032, HM-UC-033 |
+| NoticeReadStatus            | Entity     | noticeID, studentID, readAt                                                 | markRead()                                                              | HM-UC-033            |
+| ArchivedNotice              | Entity     | noticeID, archivedAt                                                        | storeArchive(), retrieveHistory()                                       | HM-UC-033            |
+| NoticeFormUI                | Boundary   | —                                                                          | displayForm(), collectNoticeData(), previewNotice()                     | HM-UC-032            |
+| NoticeBoardUI               | Boundary   | —                                                                          | displayNotices(), applyFilters(), showNoticeDetails()                   | HM-UC-033            |
+| NoticeManagementUI          | Boundary   | —                                                                          | listPublishedNotices(), selectNotice(), confirmDelete()                 | HM-UC-032            |
+| NoticeValidationController  | Control    | —                                                                          | validateContent(), validateDates(), validateAudience()                  | HM-UC-032            |
+| NoticePublishController     | Control    | —                                                                          | publishNotice(), updateNotice(), removeNotice()                         | HM-UC-032            |
+| NotificationService         | Control    | —                                                                          | notifyStudents(), sendUrgentAlert()                                     | HM-UC-032            |
+| NoticeQueryController       | Control    | —                                                                          | fetchActiveNotices(), fetchArchivedNotices()                            | HM-UC-033            |
+| NoticeTrackingController    | Control    | —                                                                          | recordReadStatus()                                                      | HM-UC-033            |
+| NoticeArchiveController     | Control    | —                                                                          | checkExpiry(), archiveExpiredNotices()                                  | HM-UC-033            |
