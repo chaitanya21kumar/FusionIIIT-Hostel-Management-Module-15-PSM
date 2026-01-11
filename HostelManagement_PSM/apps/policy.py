@@ -248,7 +248,6 @@ def br_hm_052_guest_booking_dates_valid(check_in: date, check_out: date, today: 
 
 
 # =====================================================
-# WF-112 — GUEST ROOM (ADDITIONAL RULES - PHASE 1)
 # =====================================================
 
 def br_hm_053_guest_info_required(guest_name: Optional[str], guest_contact: Optional[str]) -> bool:
@@ -302,7 +301,6 @@ def br_hm_061_extended_stay_eligibility(
 
 
 # =====================================================
-# WF-113 — EXTENDED STAY (ADDITIONAL RULES - PHASE 1)
 # =====================================================
 
 def br_hm_062_vacation_dates_valid(start_date: date, end_date: date, vacation_period_start: date, vacation_period_end: date) -> bool:
@@ -351,7 +349,6 @@ def br_hm_076_violation_handling(conduct_violations: int, max_allowed: int) -> b
 
 
 # =====================================================
-# WF-109 — ROOM VACATION (ADDITIONAL RULES - PHASE 1)
 # =====================================================
 
 def br_hm_041_clearance_verification(all_departments_clear: bool) -> bool:
@@ -365,7 +362,6 @@ def br_hm_042_room_clearance(room_inspection_done: bool, inventory_verified: boo
 
 
 # =====================================================
-# WF-111 — REPORTS (ADDITIONAL RULES - PHASE 1)
 # =====================================================
 
 def br_hm_043_report_data_validation(data_complete: bool, date_range_valid: bool) -> bool:

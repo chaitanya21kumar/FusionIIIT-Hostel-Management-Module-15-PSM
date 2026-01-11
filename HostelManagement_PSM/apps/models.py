@@ -21,7 +21,6 @@ class Student:
         self.student_id = student_id
         self.name = name
         self.hostel_id = hostel_id
-        # PHASE 1: Enhanced attributes
         self.academic_standing = "GOOD"
         self.conduct_history = []
         self.disciplinary_status = "NONE"
@@ -82,7 +81,6 @@ class Room:
         self.room_id = room_id
         self.capacity = capacity
         self.occupancy = 0
-        # PHASE 1: Enhanced attributes
         self.hostel_id = None
         self.room_number = None
         self.room_type = "STANDARD"
@@ -337,7 +335,6 @@ class GuestRoomBooking:
         self.booking_id = booking_id
         self.student_id = student_id
         self.status = "PENDING"
-        # PHASE 1: Enhanced attributes for WF-112
         self.check_in_date = None
         self.check_out_date = None
         self.guest_name = None
@@ -347,7 +344,7 @@ class GuestRoomBooking:
 
 
 # =====================================================
-# GUEST ROOM ENTITIES (PHASE 1 - WF-112)
+# GUEST ROOM ENTITIES
 # =====================================================
 
 class GuestIdentity:
@@ -377,7 +374,6 @@ class ExtendedStayApplication:
         self.student_id = student_id
         self.reason = reason
         self.status = "PENDING"
-        # PHASE 1: Enhanced attributes for WF-113
         self.start_date = None
         self.end_date = None
         self.approval_date = None
@@ -388,7 +384,7 @@ class ExtendedStayApplication:
 
 
 # =====================================================
-# EXTENDED STAY ENTITIES (PHASE 1 - WF-113)
+# EXTENDED STAY ENTITIES
 # =====================================================
 
 class VacationPeriod:
@@ -424,8 +420,8 @@ class AuthorizationDocument:
 
 
 # =====================================================
-# SUPPORTING ENTITIES (PHASE 1)
-# =====================================================
+# SUPPORTING ENTITIES
+# ============================================================
 
 class DisciplinaryReport:
     def __init__(self, report_id: str, student_id: str, severity: str):

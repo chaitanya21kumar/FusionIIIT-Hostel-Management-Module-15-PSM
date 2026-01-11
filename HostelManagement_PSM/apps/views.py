@@ -11,7 +11,6 @@ from .services import (
     impose_fine,
     create_notice,
     generate_report,
-    # PHASE 2: Additional service imports
     allot_room, request_room_change, approve_room_change,
     create_hostel, assign_staff,
     assign_guard, log_incident,
@@ -26,7 +25,6 @@ from .serializers import (
     fine_to_dict,
     notice_to_dict,
     report_to_dict,
-    # PHASE 2: Additional serializer imports
     room_allocation_to_dict, room_change_request_to_dict,
     hostel_to_dict, staff_assignment_to_dict,
     guard_to_dict, incident_report_to_dict,
@@ -109,7 +107,6 @@ def generate_report_view(payload: dict):
 
 
 # ======================================================
-# PHASE 2: ADDITIONAL BOUNDARY LAYER VIEWS
 # ======================================================
 
 # -------------------------

@@ -24,7 +24,6 @@ from .models import (
     Report, ReportParameters, ArchivedReport,
     GuestRoomBooking, ExtendedStayApplication,
     SystemAuditLog,
-    # PHASE 1: New entities
     GuestIdentity, RoomInspection, VacationPeriod, StayCharge, AuthorizationDocument,
     DisciplinaryReport, Inventory, ResourceRequest
 )
@@ -313,7 +312,6 @@ def request_guest_room(student_id: str) -> GuestRoomBooking:
 
 
 # =====================================================
-# WF-112 — GUEST ROOM (ADDITIONAL FUNCTIONS - PHASE 1)
 # =====================================================
 
 def approve_guest_booking(booking: GuestRoomBooking, role: str,
@@ -381,7 +379,6 @@ def apply_extended_stay(student_id: str, reason: str,
 
 
 # =====================================================
-# WF-113 — EXTENDED STAY (ADDITIONAL FUNCTIONS - PHASE 1)
 # =====================================================
 
 def review_extended_stay(application: ExtendedStayApplication, role: str,
